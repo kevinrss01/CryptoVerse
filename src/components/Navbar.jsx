@@ -14,21 +14,28 @@ function Navbar() {
   return (
     <div className="nav-container">
       <div className="logo-container">
-        <Avatar src={icon} size="large" />
-        <Typography.Title level={2} className="logo">
-          <Link to="/">Cryptoverse</Link>
-        </Typography.Title>
+        <div className="title">
+          <Avatar src={icon} size="large" className={"logoCrypto"} />
+          <Typography.Title level={1} className="logo">
+            <Link to="/">Cryptoverse</Link>
+          </Typography.Title>
+        </div>
+
         <Menu theme="dark">
-          <Menu.Item key="item1" icon={<HomeOutlined />}>
+          <Menu.Item key="item1" icon={<HomeOutlined />} className={"fontSize"}>
             <Link to={"/"}>Home</Link>
           </Menu.Item>
-          <Menu.Item key="item2" icon={<FundOutlined />}>
+          <Menu.Item key="item2" icon={<FundOutlined />} className={"fontSize"}>
             <Link to={"/cryptocurrencies"}>Cryptocurrency</Link>
           </Menu.Item>
-          <Menu.Item key="item3" icon={<MoneyCollectOutlined />}>
+          <Menu.Item
+            key="item3"
+            icon={<MoneyCollectOutlined />}
+            className={"fontSize"}
+          >
             <Link to={"/exchanges"}>Exchanges</Link>
           </Menu.Item>
-          <Menu.Item key="item4" icon={<BulbOutlined />}>
+          <Menu.Item key="item4" icon={<BulbOutlined />} className={"fontSize"}>
             <Link to={"/news"}>News</Link>
           </Menu.Item>
         </Menu>
