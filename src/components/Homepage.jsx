@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Cryptocurrencies } from "../components";
 import { News } from "../components";
 
+//The data form the API just below
 import { useGetCryptosQuery } from "../services/cryptoApi";
 
 const { Title } = Typography;
@@ -32,11 +33,11 @@ const Homepage = () => {
           ></Statistic>
           <Statistic
             title={"Total Market Cap"}
-            value={millify(globalStats.totalMarketCap)}
+            value={millify(globalStats.totalMarketCap) + " $"}
           ></Statistic>
           <Statistic
             title={"Total 24h Volume"}
-            value={millify(globalStats.total24hVolume)}
+            value={millify(globalStats.total24hVolume) + " $"}
           ></Statistic>
           <Statistic
             title={"Total Market"}

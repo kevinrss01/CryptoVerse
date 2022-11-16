@@ -18,29 +18,19 @@ export const cryptoApi = createApi({
     getCryptos: builder.query({
       query: (count) => `/coins?limit=${count}`,
     }),
+    getCryptoDetails: builder.query({
+      query: (coinId) => `/coin/${coinId}`,
+    }),
+    getCryptoHistory: builder.query({
+      query: ({ coinId, timePeriod }) =>
+        `coin/${coinId}/history?timePeriod=${timePeriod}`,
+    }),
   }),
 });
 
-/*export const coinGeckoAPI = createApi({
-  reducerPath: "coinGeckoAPI",
-
-  baseQuery: fetchBaseQuery({
-    baseUrl: "https://coingecko.p.rapidapi.com",
-    prepareHeaders: (headers) => {
-      headers.set(
-        "X-RapidAPI-Key",
-        "fdd690444bmsh9229d5ddb699948p158323jsna812a71735c5"
-      );
-      headers.set("X-RapidAPI-Host", "coingecko.p.rapidapi.com");
-    },
-  }),
-  endpoints: (builder) => ({
-    getCoinGecko: builder.query({
-      query: () => "/exchanges",
-    }),
-  }),
-});*/
-
-//"Use" before and 'Query' after
-export const { useGetCryptosQuery } = cryptoApi;
-//export const { useGetCoinGeckoQuery } = coinGeckoAPI;
+//"use" before and 'Query' after
+export const {
+  useGetCryptosQuery,
+  useGetCryptoDetailsQuery,
+  useGetCryptoHistoryQuery,
+} = cryptoApi;
