@@ -28,13 +28,6 @@ function Navbar() {
           <Menu.Item key="item2" icon={<FundOutlined />} className={"fontSize"}>
             <Link to={"/cryptocurrencies"}>Cryptocurrency</Link>
           </Menu.Item>
-          <Menu.Item
-            key="item3"
-            icon={<MoneyCollectOutlined />}
-            className={"fontSize"}
-          >
-            <Link to={"/exchanges"}>Exchanges</Link>
-          </Menu.Item>
           <Menu.Item key="item4" icon={<BulbOutlined />} className={"fontSize"}>
             <Link to={"/news"}>News</Link>
           </Menu.Item>

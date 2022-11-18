@@ -47,6 +47,7 @@ function News({ simplified }) {
           </Select>
         </Col>
       )}
+
       {cryptoNews.value.map((news, i) => (
         <Col xs={24} sm={12} lg={8} key={i}>
           <Card hoverable className="news-card">
@@ -55,6 +56,7 @@ function News({ simplified }) {
                 <Title className="news-title" level={4}>
                   {news.name}
                 </Title>
+                {console.log(news)}
                 <img
                   src={news?.image?.thumbnail?.contentUrl || demoImage}
                   alt="news"
