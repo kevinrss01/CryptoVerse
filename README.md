@@ -1,4 +1,4 @@
-Site web qui communique avec une API et affiche toutes les cryptomonnaies. 
-Affiche leurs cours, leurs prix, et les news. 
+Website that communicates with an API and displays all cryptocurrencies. 
+Display their courses, prices, and news. 
 
-Fait avec NodeJS, ReactJS, Redux, AntDesign, axios.
+Made with NodeJS, ReactJS, Redux, AntDesign, axios.
